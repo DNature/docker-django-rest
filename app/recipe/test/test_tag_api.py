@@ -70,9 +70,9 @@ class PrivateTagApiTests(TestCase):
         payload = {'name': 'Test tag'}
         self.client.post(TAGS_URL, payload)
 
-        exists = Tag.object.filter(
+        exists = Tag.objects.filter(
             user=self.user,
-            name=payload['name ']
+            name=payload['name']
         ).exists()
         self.assertTrue(exists)
 
