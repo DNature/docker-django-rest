@@ -69,6 +69,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                # 'django.template.context_processors.media'
             ],
         },
     },
@@ -130,10 +131,8 @@ USE_TZ = True
 STATIC_URL = '/static/'
 MEDIA_URL = '/media/'
 
-MEDIA_ROOT = '/vol/web/media'
-STATIC_ROOT = '/vol/web/static'
+MEDIA_ROOT = '/vol/web/media'  # 127.0.0.1:8080/media --> Media files
+STATIC_ROOT = '/vol/web/static'  # 127.0.0.1:8080/static --> Static files
 
-# 127.0.0.1:8080/static --> Static files
-# 127.0.0.1:8080/media --> Media files
 
 AUTH_USER_MODEL = 'core.User'
